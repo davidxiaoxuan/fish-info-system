@@ -1,0 +1,11 @@
+.homepage {
+    background-color: skyblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  

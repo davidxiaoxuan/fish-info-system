@@ -1,0 +1,52 @@
+.profile {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .profile h2 {
+    text-align: center;
+  }
+  
+  .profile form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .profile button:hover {
+    background-color: #0056b3;
+  }
+  
+  .profile h3 {
+    text-align: center;
+  }
+  
+  .profile ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .profile li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
