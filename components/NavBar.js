@@ -1,45 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css'; 
+import SearchBar from './SearchBar'; // 确保正确导入 SearchBar 组件
+import './NavBar.css';
 
-const NavBar = ({ user, setUser }) => {
-  const handleLogout = () => {
-    setUser(null);
-  };
-
-  return (
-    <nav className="navbar">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Fish Info System</Link>
-        <div className="nav-links">
-          <Link className="nav-link" to="/">Home</Link>
-          <div className="dropdown">
-            <button className="dropbtn">Area</button>
-            <div className="dropdown-content">
-              <Link to="/region/English Bay">English Bay</Link>
-              <Link to="/region/Fraser River">Fraser River</Link>
-              <Link to="/region/Stanley Park">Stanley Park</Link>
-              <Link to="/region/Burnaby Lake">Burnaby Lake</Link>
-              <Link to="/region/Capilano River">Capilano River</Link>
-              <Link to="/region/Burrard Inlet">Burrard Inlet</Link>
-              <Link to="/region/Seymour River">Seymour River</Link>
+const NavBar = () => {
+    return (
+        <nav className="navbar">
+            <a href="/" className="navbar-brand">Fish Info System</a>
+            <div className="nav-links">
+                <SearchBar />
+                <a href="/" className="nav-link">Home</a>
+                <div className="dropdown">
+                    <button className="dropbtn">Area</button>
+                    <div className="dropdown-content">
+                        <a href="/area/english-bay">English Bay</a>
+                        <a href="/area/fraser-river">Fraser River</a>
+                        <a href="/area/stanley-park">Stanley Park</a>
+                        <a href="/area/burnaby-lake">Burnaby Lake</a>
+                        <a href="/area/capilano-river">Capilano River</a>
+                        <a href="/area/burrard-inlet">Burrard Inlet</a>
+                        <a href="/area/seymour-river">Seymour River</a>
+                    </div>
+                </div>
+                <a href="/login" className="nav-link">Login</a>
+                <a href="/register" className="nav-link">Register</a>
             </div>
-          </div>
-          {user ? (
-            <>
-              <Link className="nav-link" to="/profile">Profile</Link>
-              <button className="nav-link" onClick={handleLogout}>Logout</button>
-            </>
-          ) : (
-            <>
-              <Link className="nav-link" to="/login">Login</Link>
-              <Link className="nav-link" to="/register">Register</Link>
-            </>
-          )}
-        </div>
-      </div>
-    </nav>
-  );
+        </nav>
+    );
 };
 
 export default NavBar;

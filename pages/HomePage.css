@@ -1,11 +1,24 @@
 .homepage {
-    background-color: skyblue;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-  }
-  
+  background-color: skyblue;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.search-bar {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.filter {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
