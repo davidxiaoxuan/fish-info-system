@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import FishList from '../components/FishList';
+import './RegionPage.css';
 
 const RegionPage = () => {
   const { regionName } = useParams();
@@ -17,9 +18,11 @@ const RegionPage = () => {
   }, [regionName]);
 
   return (
-    <div className="container mt-5">
-      <h1>Fishes in {regionName}</h1>
-      <FishList fishes={fishes} />
+    <div className="region-page">
+      <h1 className="region-header">Fishes in {regionName.replace('-', ' ')}</h1>
+      <div className="region-content">
+        <FishList fishes={fishes} />
+      </div>
     </div>
   );
 };

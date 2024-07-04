@@ -1,0 +1,39 @@
+.region-page {
+    background-color: #f0f8ff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.region-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.region-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: left;
+}
+
+.list-group {
+    width: 100%;
+}
+
+.list-group-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.list-group-item:hover {
+    background-color: #f0f8ff;
+    text-decoration: underline;
+}

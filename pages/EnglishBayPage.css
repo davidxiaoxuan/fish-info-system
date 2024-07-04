@@ -1,0 +1,43 @@
+.english-bay-page {
+    background-color: #e0f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.english-bay-header {
+    font-size: 2.5em;
+    color: #00796b;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px #004d40;
+}
+
+.english-bay-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    text-align: left;
+    color: #004d40;
+}
+
+.english-bay-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.english-bay-list li {
+    margin-bottom: 10px;
+}
+
+.english-bay-list li a {
+    text-decoration: none;
+    color: #00796b;
+    font-weight: bold;
+}
+
+.english-bay-list li a:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
