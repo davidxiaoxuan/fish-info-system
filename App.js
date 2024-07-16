@@ -15,7 +15,6 @@ import BurrardInletPage from './pages/BurrardInletPage';
 import SeymourRiverPage from './pages/SeymourRiverPage';
 import FishPage from './pages/FishPage';
 import SearchResults from './pages/SearchResults';
-import TestComponent from './components/TestComponent'; // 引入TestComponent
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,7 +37,6 @@ function App() {
         <Route path="/region/:regionName" element={<RegionPage />} />
         <Route path="/fish/:fishId" element={<FishPage />} />
         <Route path="/search" element={<SearchResults />} />
-        <Route path="/test" element={<TestComponent />} /> {/* 添加TestComponent的路径 */}
       </Routes>
     </Router>
   );

@@ -17,7 +17,7 @@ const Register = () => {
       return;
     }
     try {
-      await axiosInstance.post('/register', { email, password });
+      await axiosInstance.post('/register/', { email, password });
       navigate('/login');
     } catch (err) {
       setError('Registration failed');
@@ -57,4 +57,3 @@ const Register = () => {
 };
 
 export default Register;
-

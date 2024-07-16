@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
-import axios from 'axios';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
+import axiosInstance from '../api/axiosConfig';
 
 const SearchResults = () => {
   const [results, setResults] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const query = new URLSearchParams(location.search).get('query');
+    console.log('Query:', query);  // 添加日志记录
 
-    axios.get(`http://localhost:5000/api/search?query=${query}`)
+    axiosInstance.get('/search/', { params: { query } })
       .then(response => {
+        console.log('Search Results:', response.data);  // 添加日志记录
         setResults(response.data);
+        if (response.data.length > 0) {
+          const fishId = response.data[0].id;
+          navigate(`/fish/${fishId}`);
+        }
       })
       .catch(error => console.error('Error fetching search results:', error));
-  }, [location.search]);
+  }, [location.search, navigate]);
 
   return (
     <div>

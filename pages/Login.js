@@ -12,7 +12,7 @@ const Login = ({ setUser }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post('/login', { email, password });
+      const response = await axiosInstance.post('/login/', { email, password });  // 确认路径为 /login/
       setUser(response.data);
       navigate('/profile');
     } catch (err) {
