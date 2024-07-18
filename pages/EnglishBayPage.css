@@ -41,3 +41,8 @@
     color: #004d40;
     text-decoration: underline;
 }
+
+.english-bay-list p {
+    margin: 5px 0 0 0;
+    color: #555;
+}

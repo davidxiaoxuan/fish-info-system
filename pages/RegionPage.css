@@ -8,8 +8,10 @@
 }
 
 .region-header {
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #333;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 2px #aaa;
 }
 
 .region-content {
@@ -17,23 +19,30 @@
     line-height: 1.6;
     max-width: 800px;
     text-align: left;
+    color: #555;
 }
 
-.list-group {
-    width: 100%;
+.region-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.list-group-item {
-    padding: 15px;
+.region-list li {
     margin-bottom: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+}
+
+.region-list li a {
     text-decoration: none;
     color: #007bff;
+    font-weight: bold;
 }
 
-.list-group-item:hover {
-    background-color: #f0f8ff;
+.region-list li a:hover {
+    color: #0056b3;
     text-decoration: underline;
+}
+
+.region-list p {
+    margin: 5px 0 0 0;
+    color: #777;
 }

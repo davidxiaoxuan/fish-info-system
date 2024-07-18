@@ -1,6 +1,14 @@
 import React from 'react';
 import './RegionPage.css';
 
+const fishData = [
+    {
+        id: 'spiny-dogfish',
+        name: 'Spiny dogfish',
+        description: 'The spiny dogfish, spurdog, mud shark, or piked dogfish is one of the best known species of the Squalidae family of sharks, which is part of the Squaliformes order. While these common names may apply to several species, Squalus acanthias is distinguished by two spines and no anal fin.'
+    }
+];
+
 const BurrardInletPage = () => {
     return (
         <div className="region-page">
@@ -8,9 +16,12 @@ const BurrardInletPage = () => {
             <div className="region-content">
                 <p>Welcome to the Burrard Inlet page. Here you can find information about the fish species found in this area.</p>
                 <ul className="region-list">
-                    <li><a href="#fish1">Fish Species 1</a></li>
-                    <li><a href="#fish2">Fish Species 2</a></li>
-                    <li><a href="#fish3">Fish Species 3</a></li>
+                    {fishData.map(fish => (
+                        <li key={fish.id}>
+                            <a href={`#${fish.id}`}>{fish.name}</a>
+                            <p>{fish.description}</p>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>

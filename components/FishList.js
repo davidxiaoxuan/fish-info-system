@@ -1,15 +1,17 @@
+// src/components/FishList.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FishList = ({ fishes }) => {
+const FishList = ({ fishData = [] }) => {
   return (
-    <div className="list-group">
-      {fishes.map(fish => (
-        <Link key={fish.id} to={`/fish/${fish.id}`} className="list-group-item list-group-item-action">
-          {fish.name}
-        </Link>
+    <ul className="region-list">
+      {fishData.map(fish => (
+        <li key={fish.id}>
+          <Link to={`#${fish.id}`}>{fish.name}</Link>
+          <p>{fish.description}</p>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 
